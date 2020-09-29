@@ -1041,6 +1041,12 @@ function TrGCDEventHandler(self, event, who, _, spellId)
 					if (IsChannel == nil) then TrGCDCastSp[i] = 1 end
 				else
 					local b = false --висит ли багнутый бафф инстант каста
+
+					if (spellId == 20904) then
+						TrGCDInsSp["spell"][i] = 20904
+						b = true
+					end
+
 					if ((TrGCDInsSp["spell"][i] == 48108) and (spellId == 11366)) then b = true
 					elseif ((TrGCDInsSp["spell"][i] == 48108) and (spellId == 2120)) then b = true
 					elseif ((TrGCDInsSp["spell"][i] == 34936) and (spellId == 29722)) then b = true
